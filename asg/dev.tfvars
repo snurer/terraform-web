@@ -1,0 +1,12 @@
+env                 = "dev"
+instance_type       = "t2.micro"
+max_size            = 5
+min_size            = 2
+desired_capacity    = 3
+force_delete        = true
+vpc_zone_identifier = ["subnet-065b77926ad85aa2b", "subnet-0c8df804b5cb38b57"]
+region              = "ue1"
+stage               = "nonprod"
+project             = "Ctask"
+ingress_ports       = ["22", "80"]
+vpc_id              = "vpc-0939482cf9eb05abf"
