@@ -21,5 +21,11 @@ data "template_file" "userdata" {
 }
 
 data "aws_vpc" "custom_vpc" {
-  id = var.vpc_id
+  filter {
+    name   = "tag:Name"
+    values = ["aws-ue1-nonprod-dev-Ctask-main-vpc"]
+  }
+}
+data "aws_lb_target_group" "main" {
+  name = "aws-ue1-dev-Ctask-main-tg"
 }
