@@ -1,5 +1,8 @@
 data "aws_vpc" "custom_vpc" {
-  id = var.vpc_id
+  filter {
+    name   = "tag:Name"
+    values = ["aws-ue1-nonprod-dev-Ctask-main-vpc"]
+  }
 }
 
 data "aws_autoscaling_group" "dev_asg" {
