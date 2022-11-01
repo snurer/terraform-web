@@ -24,16 +24,6 @@ variable "app_port" {
   default = 80
 }
 
-variable "vpc_id" {
-  type        = string
-  description = "variable for vpc_id"
-  default     = "vpc-054b2a5ad41b642fe"
-}
-
-variable "subnets" {
-  type    = list(string)
-  default = ["subnet-0deebc272263ef575", "subnet-0f5d97c41457da329", "subnet-074cc41f00068d5f1"]
-}
 
 variable "ingress_ports" {
   type        = list(string)

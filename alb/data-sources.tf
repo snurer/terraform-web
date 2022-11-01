@@ -1,10 +1,17 @@
-data "aws_vpc" "custom_vpc" {
-  filter {
-    name   = "tag:Name"
-    values = ["aws-ue1-nonprod-dev-Ctask-main-vpc"]
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+  config = {
+    bucket = "aws-session-may22-remote-backend"
+    region = "us-west-2"
+    key    = "vpc/backend/terraform.tfstate"
   }
 }
 
-data "aws_autoscaling_group" "dev_asg" {
-  name = "aws-ue1-dev-nonprod-CTask-main_asg"
+data "terraform_remote_state" "asg" {
+  backend = "s3"
+  config = {
+    bucket = "aws-session-may22-remote-backend"
+    region = "us-west-2"
+    key    = "asg/backend/terraform.tfstate"
+  }
 }
