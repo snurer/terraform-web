@@ -39,3 +39,9 @@ terraform apply
 When you are destroying your resources, run ```terraform destroy``` to ALB, ASG and VPC respectively. If you destroy VPC first, you'll ruin the configuration of other services and will not be able to destroy them with Terraform.
 
 ***Note*** : There's a better way to configure all services being connected to each other, which is [Terraform Modules](https://developer.hashicorp.com/terraform/language/modules) . In this project, we used data sourcing to backend files. The codes are working perfectly however it would need a lot of complex configurations and when there are more services to manage. So you would definitely go and use **Modules**. However, it's nice to see and configure the Resources without modules to understand the background process better.
+
+## Contribution
+
+Thank you! Feel free to clone this repository and contribute!
+
+Author: [snurer](https://github.com/snurer)
