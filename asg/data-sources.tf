@@ -25,15 +25,7 @@ data "terraform_remote_state" "vpc" {
   config = {
     bucket = "aws-session-may22-remote-backend"
     region = "us-west-2"
-    key    = "vpc/terraform.tfstate"
+    key    = "vpc/backend/terraform.tfstate"
   }
 }
 
-data "terraform_remote_state" "alb" {
-  backend = "s3"
-  config = {
-    bucket = "aws-session-may22-remote-backend"
-    region = "us-west-2"
-    key    = "alb/terraform.tfstate"
-  }
-}
