@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
   name        = replace(local.name, "rtype", "main-vpc-sg")
   description = "This is a security group for my instance"
-  vpc_id      = data.aws_vpc.custom_vpc.id
+  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
 }
 
 resource "aws_security_group_rule" "main_ingress" {

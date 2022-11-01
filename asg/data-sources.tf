@@ -20,12 +20,20 @@ data "template_file" "userdata" {
   }
 }
 
-data "aws_vpc" "custom_vpc" {
-  filter {
-    name   = "tag:Name"
-    values = ["aws-ue1-nonprod-dev-Ctask-main-vpc"]
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+  config = {
+    bucket = "aws-session-may22-remote-backend"
+    region = "us-west-2"
+    key    = "vpc/terraform.tfstate"
   }
 }
-data "aws_lb_target_group" "main" {
-  name = "aws-ue1-dev-Ctask-main-tg"
+
+data "terraform_remote_state" "alb" {
+  backend = "s3"
+  config = {
+    bucket = "aws-session-may22-remote-backend"
+    region = "us-west-2"
+    key    = "alb/terraform.tfstate"
+  }
 }
