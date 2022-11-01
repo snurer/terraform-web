@@ -9,9 +9,9 @@ This repository contains three different folders to create custom VPC with 3 pri
 
 | Template    | Description     |
 | :--- | :--- | 
-|[alb](https://github.com/snurer/terraform-web/tree/main/alb)    |TF templates that creates target group and application load balancer with security group   |
-|[asg](https://github.com/snurer/terraform-web/tree/main/asg)    |TF templates that creates auto scaling group, launch template with security group     |
-|[vpc](https://github.com/snurer/terraform-web/tree/main/vpc)     |TF template that created vpc, subnets, route tables, internet gateway, nat gateway and vpc flow log   |
+|[alb](https://github.com/snurer/terraform-web/tree/main/alb)    |TF templates that create target group and application load balancer with security group   |
+|[asg](https://github.com/snurer/terraform-web/tree/main/asg)    |TF templates that create auto scaling group, launch template with security group     |
+|[vpc](https://github.com/snurer/terraform-web/tree/main/vpc)     |TF templates that create vpc, subnets, route tables, internet gateway and nat gateway   |
 
 ## Terraform Apply
 
